@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail | Benang Ratu Heritage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #dac0c2;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#7c2a3a",
+                      "on-primary-container": "#f18795",
+                      "primary-container": "#6d1f2f",
+                      "on-tertiary-container": "#76b38c",
+                      "surface-tint": "#9a4150",
+                      "tertiary-fixed-dim": "#97d4ab",
+                      "secondary-container": "#fedb99",
+                      "inverse-on-surface": "#feeded",
+                      "on-error": "#ffffff",
+                      "tertiary-container": "#004527",
+                      "on-tertiary-fixed-variant": "#125132",
+                      "on-secondary-fixed-variant": "#5a430f",
+                      "on-secondary-fixed": "#261900",
+                      "surface-container-low": "#fff0f0",
+                      "outline-variant": "#dac0c2",
+                      "on-background": "#22191a",
+                      "on-secondary-container": "#785f29",
+                      "on-secondary": "#ffffff",
+                      "background": "#fff8f7",
+                      "on-primary-fixed": "#400011",
+                      "on-error-container": "#93000a",
+                      "inverse-surface": "#382e2f",
+                      "surface": "#fff8f7",
+                      "tertiary": "#002c17",
+                      "primary-fixed": "#ffd9dc",
+                      "surface-container-high": "#f5e4e5",
+                      "secondary": "#735b25",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#e3c282",
+                      "outline": "#877274",
+                      "primary-fixed-dim": "#ffb2bb",
+                      "on-tertiary-fixed": "#002110",
+                      "inverse-primary": "#ffb2bb",
+                      "on-tertiary": "#ffffff",
+                      "surface-container": "#fbeaea",
+                      "on-surface-variant": "#544244",
+                      "primary": "#50071b",
+                      "on-surface": "#22191a",
+                      "surface-variant": "#efdfdf",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#b2f1c6",
+                      "surface-container-highest": "#efdfdf",
+                      "secondary-fixed": "#ffdea1",
+                      "surface-bright": "#fff8f7",
+                      "surface-dim": "#e7d6d7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "body-md": ["Montserrat"],
+                      "headline-lg": ["Playfair Display"],
+                      "label-sm": ["Montserrat"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-sm": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "label-lg": ["Montserrat"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "body-lg": ["Montserrat"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="hidden md:flex gap-8">
+<a class="font-label-lg text-label-lg text-primary border-b border-primary pb-1" href="homepage.html">Shop</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="collections.html">Collections</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="heritage.html">Heritage</a>
+</div>
+<div class="font-headline-md text-headline-md font-medium tracking-tight text-primary">
+                Benang Ratu Heritage
+            </div>
+<div class="flex items-center gap-6">
+<a href="search.html" class="material-symbols-outlined text-on-surface-variant hover:opacity-70 transition-opacity">search</a>
+<a href="favorite.html" class="material-symbols-outlined text-on-surface-variant hover:opacity-70 transition-opacity">favorite</a>
+<a href="cart.html" class="material-symbols-outlined text-on-surface-variant hover:opacity-70 transition-opacity">shopping_bag</a>
+<button class="md:hidden material-symbols-outlined text-on-surface-variant">menu</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Product Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-16">
+<!-- Gallery: Grid layout for high-end editorial feel -->
+<div class="lg:col-span-7 flex flex-col md:flex-row-reverse gap-4">
+<div class="relative w-full aspect-[3/4] overflow-hidden bg-surface-container">
+<img alt="Batik Tulis Kencana" class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="A high-end editorial close-up of a premium Batik Tulis Kencana shirt. The fabric is a deep maroon with intricate antique gold motifs of traditional Javanese patterns. Soft, warm natural light illuminates the fine texture of the Primissima cotton, highlighting the hand-drawn precision of the wax-resist technique. The setting is a minimalist, luxury studio with soft shadows and a warm ivory background, evoking prestige and timeless Solo craftsmanship." id="main-image" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASmaKNaDFGSd5df-FMeHIhDM8EEIcjvCCdWExSb4xBdyt7ls0NC3EntsuLZDVJ-2jkRGrEPpWxZRQ8KMAgUJKc08JPdn3EpCV8r34LSckglio5r6XgKlhaqhZXihCEy0WGEy9qku9gVVdZslUlFga5MM5o18FTq4C0QpJ6FDGLFdJ6tbSd67PgGGrpDiow7cqlkfsXKGJzyX6W32o8VTg50IxdddzCKiX9Cg6_dFExyZPvPok9F9mxLmVBegOm4_3HSVgMBvuttRlu"/>
+<div class="absolute top-6 left-6">
+<span class="bg-surface/90 backdrop-blur px-4 py-1 font-label-sm text-label-sm text-primary border border-outline-variant/30 uppercase tracking-widest">Hand-drawn</span>
+</div>
+</div>
+<!-- Thumbnails -->
+<div class="flex md:flex-col gap-4 overflow-x-auto md:overflow-visible custom-scrollbar">
+<button class="w-20 md:w-24 aspect-[3/4] flex-shrink-0 border border-primary p-0.5 opacity-100 transition-all" onclick="updateImage(this.children[0].src)">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEJC1Tnyp6dmsSnVuj9q-SwtSBV9P5Hs4wC-34EBmWiD2YO5guMHCSVaa_E3DPgdA1c-PXEoaiB8pfLtNYF9nV9-bwcXefNXEV8AS7i5vFTN_nw8WJwEp71MCRKYjyyS4_V56fhOl9SkNjt2itHHEQ9gnAkoXv0iQGq8ufCV_8jtB7YRf7X3V5kydywxQVXKkscLHGVfjInhbzhOgIQdGkYW1d38fgVYIQSfgYDCaCcz16l4f5XoU8EVZWVGrtE_WgQa-7FllRvaj9"/>
+</button>
+<button class="w-20 md:w-24 aspect-[3/4] flex-shrink-0 border border-transparent hover:border-outline-variant p-0.5 opacity-60 hover:opacity-100 transition-all" onclick="updateImage(this.children[0].src)">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfr4jwhUvX6NPlp1qspxa_BhwBq5gpll0BErBXTNNYIvWGvEU5XaIc4CANZd__yLhPSAmnISx2jhVXxjDLvblU8YNVRMWWExP7HRBwFCpcUfmbhgLOnUHTyDUBPzJHOlUBh9-cAE3BVHEgZS-Bt2wyLeSZZjM4soFm5sUwn4LoRlD1jG4o3SeXQqOfSt4Dlzmn9UXcYTM9c5RDwCCFhp5YAmETddkt-Y1704mWNR-C3nNIW1Ikf8brzc5Y_6EsrDlDcmh3PWaFotqR"/>
+</button>
+<button class="w-20 md:w-24 aspect-[3/4] flex-shrink-0 border border-transparent hover:border-outline-variant p-0.5 opacity-60 hover:opacity-100 transition-all" onclick="updateImage(this.children[0].src)">
+<img alt="Thumbnail 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3I0uJuvJj_c9UCwfCYpjwf90sEnzCFrSQLIMA_CP_Dz-CDEB0VY2vjK88-c4XToYmBQuH6pLJ9SYiyi0tlQEkGDWh1oJkMf6N33hdW8bqCJFWU1_8kBJRusfP5ecy8dEwAm60YBW5PpU4nAC_g2bJHjz16YqFyg1ngnbOuT6DSuNXeiBFxKNGk2f7EmCDWE_AQbnP0uXnjVkS57W4x-2MwoUzE0lla1GTjDHBYqUEawDC0isDtwuOpCGVvfX0w0AsUVj5QASOoyn5"/>
+</button>
+<button class="w-20 md:w-24 aspect-[3/4] flex-shrink-0 border border-transparent hover:border-outline-variant p-0.5 opacity-60 hover:opacity-100 transition-all" onclick="updateImage(this.children[0].src)">
+<img alt="Thumbnail 4" class="w-full h-full object-crop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfsrNfKiRON93jOEL3ZGYsVveMCIbN4EibC3gZTGGz-nh7Tg_B4jzT92CUM_YeDcM9fo6dgUKabOdj3i3xPLf0fDby7MNLBsTP02p8OgeZYK6zFUXJftry-ALmgc00HMvURcvn0f4fLQ2FTdntCJUxGeuT1_gxVE8_PjGL8FnD30Hrw-snqEI0Fdxk2UTPO3NFeCyxsweQUGE_bOHWSHGRGWAWxhYDxCGiRHfyCtYjUdFzaL5bJqtmhNaVWA_Lx40CiZUcGyG3ZVoV"/>
+</button>
+</div>
+</div>
+<!-- Product Information -->
+<div class="lg:col-span-5 flex flex-col pt-4 lg:pt-0">
+<div class="fade-in">
+<nav class="flex gap-2 font-label-sm text-label-sm text-on-surface-variant mb-6 uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="collections.html">Men</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="collections.html">Exclusive Series</a>
+</nav>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Batik Tulis Kencana</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 italic">A masterpiece from the heart of Solo, Laweyan.</p>
+<div class="text-secondary font-headline-sm text-headline-sm mb-10 tracking-tight">
+                        IDR 4.250.000
+                    </div>
+<!-- Tabs/Accordion for refined info -->
+<div class="space-y-8 mb-12">
+<div>
+<h3 class="font-label-lg text-label-lg text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+                                The Craftsmanship
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                This "Kencana" piece features the royal Sidomukti pattern, traditionally symbolizing a life of prosperity and dignity. Every stroke is meticulously hand-drawn using natural canting and high-quality malam (wax) by our master artisans in Surakarta. It takes 45 days to complete a single garment.
+                            </p>
+</div>
+<div class="pt-6 border-t border-outline-variant/30">
+<h3 class="font-label-lg text-label-lg text-primary uppercase mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+                                Material &amp; Care
+                            </h3>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-2 list-disc list-inside">
+<li>100% Premium Primissima Cotton (Extra Soft)</li>
+<li>Double-layered silk lining for structure</li>
+<li>Dry clean only to preserve natural dyes</li>
+<li>Iron on low heat from the reverse side</li>
+</ul>
+</div>
+</div>
+<!-- Size Guide & Selector -->
+<div class="mb-12">
+<div class="flex justify-between items-end mb-4">
+<label class="font-label-lg text-label-lg text-primary uppercase">Select Size</label>
+<button class="text-secondary font-label-sm text-label-sm uppercase hover:underline" onclick="toggleSizeGuide()">Size Guide</button>
+</div>
+<div class="grid grid-cols-4 gap-3">
+<button class="py-3 border border-outline-variant text-on-surface-variant font-label-lg text-label-lg hover:border-primary hover:text-primary transition-all uppercase">S</button>
+<button class="py-3 border border-primary text-primary font-label-lg text-label-lg bg-surface-container-low transition-all uppercase">M</button>
+<button class="py-3 border border-outline-variant text-on-surface-variant font-label-lg text-label-lg hover:border-primary hover:text-primary transition-all uppercase">L</button>
+<button class="py-3 border border-outline-variant text-on-surface-variant font-label-lg text-label-lg hover:border-primary hover:text-primary transition-all uppercase">XL</button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 bg-primary text-on-primary py-5 px-8 font-label-lg text-label-lg uppercase tracking-widest flex justify-center items-center gap-3 active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                            Inquiry via WhatsApp
+                        </button>
+<a href="favorite.html" class="px-8 py-5 border border-secondary text-secondary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary/5 transition-colors flex justify-center items-center"><span class="material-symbols-outlined">favorite</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full h-px bg-outline-variant/30 my-section-gap"></div>
+<!-- Related Products Section -->
+<section>
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline-md text-headline-md text-primary">You May Also Like</h2>
+<a class="font-label-lg text-label-lg text-on-surface-variant border-b border-outline-variant hover:text-primary hover:border-primary transition-all pb-1 uppercase" href="collections.html">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Related Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container relative mb-4">
+<img alt="Batik Indigo Parang" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A premium batik shirt featuring a dark navy base with intricate cream and gold 'Parang' patterns. The shot is an editorial studio photograph with high contrast lighting, emphasizing the luxury texture of the silk-cotton blend. Soft shadows fall across a neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBztggJtffRBKuVmAOHYWlH6ttTQx2txTjNC4r7NmS_dwJZBSL5k5jOG45Z-8p3kLiarpzR47zUIIkpp5DYp-6j-0F7i-87uOGJrxLpHhyxsPdkhbE32NuHLgu3oqhzhPAr8ztdpkyzzaz5GLb4mUuZi_EsIhXDgV1OVSv6V7di8JH9aOQ8QQySJ43Oj54NXg02M_Q7_gWwGOye04gt44iJjocKXFFgdhAP35Q8qpT0p5eHeslAWZ4YmPpbtrQIzb0u9rdxxmR48DTq"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Batik Indigo Parang</h3>
+<p class="font-body-md text-body-md text-secondary">IDR 3.850.000</p>
+</div>
+<!-- Related Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container relative mb-4">
+<img alt="Batik Sekar Jagad" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated long-sleeve batik shirt with a modern floral motif in muted earth tones of sage green and charcoal. The garment is draped elegantly in a high-fashion editorial setting, featuring soft rim lighting and a minimalist ivory backdrop that conveys exclusivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx62oQVbGYbZ627UoSiUqHALgtAEntlc6bGZkp90kjJLjVwg0a95HBnk3ga1ABBKzEyLoLd_0Wxh-qWpMdZJY8P0BySXSNb-DLlYi4ndAN1nwezN2BEt4D811lIPNZxagRSDJk9iiG-TMH32ODr53m0gX6BMtn19XWwsl4HKrZUHVYndApr_bd7IEq4gEodJsSVZiMo6ppuCEqZOYZRKnkIF9yXgUIh4bVSh8YOpuGgwgQcKqde969-9MkzV4Q3xA9E5vWePeUTV_a"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Batik Sekar Jagad</h3>
+<p class="font-body-md text-body-md text-secondary">IDR 4.100.000</p>
+</div>
+<!-- Related Item 3 -->
+<div class="group cursor-pointer hidden md:block">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container relative mb-4">
+<img alt="Batik Sawat Mas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Detail shot of a hand-painted batik shirt featuring intricate golden accents on a deep mahogany background. The pattern is 'Sawat', symbolizing power. The lighting is low-key and dramatic, focusing on the fine wax-resist lines and the organic feel of the artisanal fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBgtnL4RIy9gtYaz07yUOXlo5rHFZOK9l3lQQAOMOOhJrRRCFZdFzoI-ux6w7t5IBCu8Cvp-VI9C_Xe8hhN5b39ZAoz3wVcNqp63rB3BtojNzPtnXfvFH7c9h_AbKDxNJhhlRtJjcKTbm-CdzUQewc5Fflyv3ni47czTNkiSGJdQvnbwgfZH8HkxD9S_QFnN_Z80JtFOCPWUk_41CFb2_uddQN8XwKSmakrWEdAZckhaKZ3AMYnJClv2RenHMpmHBKhQrx0pYjrr3d"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Batik Sawat Mas</h3>
+<p class="font-body-md text-body-md text-secondary">IDR 4.950.000</p>
+</div>
+<!-- Related Item 4 -->
+<div class="group cursor-pointer hidden lg:block">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container relative mb-4">
+<img alt="Batik Wahyu Tumurun" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up high-fashion photograph of a batik shirt with abstract traditional motifs in ochre and chocolate brown. The fabric is a lustrous silk blend, shown with elegant folds that catch the soft directional studio light. The mood is one of quiet, expensive luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVCVIeqYPOWXSf3IjuU8_QSbwsC4EuqzJxFvA4pNxRoxRj6mV_pXcAU_quknqlbwcU8TeYQv4ynubpCDvzt8i0qIqfxWvNhvUcg9B77s7Tr85w6uQiA6vUHxn0puL8Am119zx7-0-p_C-wKJgqUs93c77GpkarItEWKtrVTn9PbDtiQicHoL5Es0srGt3rcVKZqoiHLcq_BIz5NDo8TZQqjaatHrs8-F9Bz64M-QCeD3Ew6yZi0XjjjunjKmbUDeL-0X5EHyQNTPMF"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Batik Wahyu Tumurun</h3>
+<p class="font-body-md text-body-md text-secondary">IDR 5.200.000</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Size Guide Modal -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center p-6 hidden" id="size-guide-modal">
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-sm" onclick="toggleSizeGuide()"></div>
+<div class="bg-surface w-full max-w-2xl relative p-8 md:p-12 shadow-2xl">
+<button class="absolute top-6 right-6 material-symbols-outlined text-primary" onclick="toggleSizeGuide()">close</button>
+<h2 class="font-headline-md text-headline-md text-primary mb-8 text-center uppercase tracking-widest">Size Guide</h2>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="py-4 text-left font-label-lg text-label-lg text-primary uppercase">Size (cm)</th>
+<th class="py-4 text-center font-label-lg text-label-lg text-primary uppercase">Chest</th>
+<th class="py-4 text-center font-label-lg text-label-lg text-primary uppercase">Length</th>
+<th class="py-4 text-center font-label-lg text-label-lg text-primary uppercase">Shoulder</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface-variant">
+<tr class="border-b border-outline-variant/30">
+<td class="py-5 font-medium text-primary">S</td>
+<td class="py-5 text-center">104</td>
+<td class="py-5 text-center">72</td>
+<td class="py-5 text-center">44</td>
+</tr>
+<tr class="border-b border-outline-variant/30">
+<td class="py-5 font-medium text-primary">M</td>
+<td class="py-5 text-center">108</td>
+<td class="py-5 text-center">74</td>
+<td class="py-5 text-center">46</td>
+</tr>
+<tr class="border-b border-outline-variant/30">
+<td class="py-5 font-medium text-primary">L</td>
+<td class="py-5 text-center">114</td>
+<td class="py-5 text-center">76</td>
+<td class="py-5 text-center">48</td>
+</tr>
+<tr class="border-b border-outline-variant/30">
+<td class="py-5 font-medium text-primary">XL</td>
+<td class="py-5 text-center">120</td>
+<td class="py-5 text-center">78</td>
+<td class="py-5 text-center">50</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-8 font-label-sm text-label-sm text-on-surface-variant text-center uppercase">All measurements are in centimeters. Model is 185cm wearing size M.</p>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full bg-surface-container border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-sm text-headline-sm text-primary">Benang Ratu Heritage</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Preserving the legacy of Batik Solo through timeless elegance and meticulous hand-drawn artistry.</p>
+</div>
+<div class="space-y-4">
+<div class="font-label-lg text-label-lg text-primary uppercase">Experience</div>
+<nav class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="heritage.html">The Craftsmanship</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Bespoke Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="heritage.html">Our Story</a>
+</nav>
+</div>
+<div class="space-y-4">
+<div class="font-label-lg text-label-lg text-primary uppercase">Support</div>
+<nav class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Store Locator</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Privacy Policy</a>
+</nav>
+</div>
+<div class="space-y-6">
+<div class="font-label-lg text-label-lg text-primary uppercase">Join the Legacy</div>
+<div class="flex border-b border-secondary pb-2">
+<input class="bg-transparent border-none focus:ring-0 w-full font-label-sm text-label-sm text-primary placeholder:text-on-surface-variant/50 uppercase" placeholder="Email Address" type="email"/>
+<button class="material-symbols-outlined text-primary">arrow_forward</button>
+</div>
+<div class="flex gap-4">
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">public</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Batik Benang Ratu Heritage Solo. All Rights Reserved.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Finest Heritage Quality</p>
+</div>
+</footer>
+<script>
+        function updateImage(src) {
+            const mainImg = document.getElementById('main-image');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = src;
+                mainImg.style.opacity = '1';
+            }, 300);
+            
+            // Highlight thumbnail
+            const thumbs = document.querySelectorAll('.flex-shrink-0');
+            thumbs.forEach(t => {
+                t.classList.remove('border-primary', 'opacity-100');
+                t.classList.add('border-transparent', 'opacity-60');
+            });
+            event.currentTarget.classList.add('border-primary', 'opacity-100');
+            event.currentTarget.classList.remove('border-transparent', 'opacity-60');
+        }
+
+        function toggleSizeGuide() {
+            const modal = document.getElementById('size-guide-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
+<a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50 flex items-center justify-center" aria-label="Chat via WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+  </svg>
+</a>
+</body></html>
+
+
+
+
+
+
+

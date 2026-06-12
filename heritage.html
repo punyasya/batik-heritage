@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Heritage | Benang Ratu Heritage</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#7c2a3a",
+                    "on-primary-container": "#f18795",
+                    "primary-container": "#6d1f2f",
+                    "on-tertiary-container": "#76b38c",
+                    "surface-tint": "#9a4150",
+                    "tertiary-fixed-dim": "#97d4ab",
+                    "secondary-container": "#fedb99",
+                    "inverse-on-surface": "#feeded",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#004527",
+                    "on-tertiary-fixed-variant": "#125132",
+                    "on-secondary-fixed-variant": "#5a430f",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-low": "#fff0f0",
+                    "outline-variant": "#dac0c2",
+                    "on-background": "#22191a",
+                    "on-secondary-container": "#785f29",
+                    "on-secondary": "#ffffff",
+                    "background": "#fff8f7",
+                    "on-primary-fixed": "#400011",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#382e2f",
+                    "surface": "#fff8f7",
+                    "tertiary": "#002c17",
+                    "primary-fixed": "#ffd9dc",
+                    "surface-container-high": "#f5e4e5",
+                    "secondary": "#735b25",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#e3c282",
+                    "outline": "#877274",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "on-tertiary-fixed": "#002110",
+                    "inverse-primary": "#ffb2bb",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#fbeaea",
+                    "on-surface-variant": "#544244",
+                    "primary": "#50071b",
+                    "on-surface": "#22191a",
+                    "surface-variant": "#efdfdf",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#b2f1c6",
+                    "surface-container-highest": "#efdfdf",
+                    "secondary-fixed": "#ffdea1",
+                    "surface-bright": "#fff8f7",
+                    "surface-dim": "#e7d6d7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-sm": ["Montserrat"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #FAF6F0; /* Ivory background per Style Guidance */
+            scroll-behavior: smooth;
+        }
+        .luxury-shadow {
+            box-shadow: 0 10px 40px -10px rgba(80, 7, 27, 0.08);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 50px -12px rgba(80, 7, 27, 0.12);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #fff8f7;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #dac0c2;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-medium tracking-tight text-primary dark:text-primary-fixed">
+                Benang Ratu Heritage
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="homepage.html">Shop</a>
+<a class="font-label-lg text-label-lg text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-1" href="collections.html">Collections</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="heritage.html">Heritage</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<a href="search.html" class="scale-100 active:scale-95 transition-transform hover:opacity-70"><span class="material-symbols-outlined text-primary">search</span></a>
+<a href="favorite.html" class="scale-100 active:scale-95 transition-transform hover:opacity-70"><span class="material-symbols-outlined text-primary">favorite</span></a>
+<a href="cart.html" class="scale-100 active:scale-95 transition-transform hover:opacity-70"><span class="material-symbols-outlined text-primary">shopping_bag</span></a>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-gap">
+<!-- Hero Title -->
+<header class="px-margin-desktop max-w-container-max mx-auto mb-16 text-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Our Heritage</h1>
+<div class="w-24 h-[1px] bg-secondary mx-auto"></div>
+</header>
+<section class="px-margin-desktop max-w-container-max mx-auto mb-12">
+    <div class="flex flex-col md:flex-row gap-16 items-center">
+        <div class="w-full md:w-1/2">
+            <img src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?q=80&w=1000&auto=format&fit=crop" alt="Pengrajin Batik" class="w-full h-[600px] object-cover shadow-xl rounded-sm">
+        </div>
+        <div class="w-full md:w-1/2">
+            <h2 class="font-headline-lg text-primary mb-6">Warisan Budaya Sejak 1980</h2>
+            <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">Batik Benang Ratu Heritage lahir dari dedikasi mendalam terhadap seni lukis kain tradisional Jawa. Didirikan di jantung kota Surakarta (Solo), kami memulai perjalanan sebagai bengkel kecil yang memproduksi kain batik tulis eksklusif untuk kalangan keraton dan kolektor seni.</p>
+            <p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">Setiap helai kain yang kami produksi melewati proses panjang yang menuntut kesabaran tingkat tinggi. Mulai dari pemintalan benang, penggambaran pola dengan canting, hingga pewarnaan menggunakan bahan alami yang ramah lingkungan.</p>
+            <blockquote class="border-l-4 border-secondary pl-6 italic font-headline-md text-on-surface mb-8">
+                "Kami tidak sekadar menjual pakaian, kami mewariskan mahakarya budaya."
+            </blockquote>
+            <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">Hingga hari ini, Benang Ratu Heritage tetap setia pada teknik Tulis dan Cap tradisional, sambil terus berinovasi dalam siluet modern yang cocok untuk gaya hidup masa kini. Kami percaya bahwa keindahan sejati terletak pada detail kerajinan tangan yang tak lekang oleh waktu.</p>
+        </div>
+    </div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed">Benang Ratu Heritage</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The epitome of Solo's craftsmanship, weaving stories of heritage into every thread of our batik.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg text-label-lg text-primary uppercase mb-2">Collections</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="collections.html">Batik Tulis</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="collections.html">Limited Silk</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="collections.html">Wedding Series</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="collections.html">Men's Executive</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-lg text-label-lg text-primary uppercase mb-2">Quick Links</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="heritage.html">The Craftsmanship</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Store Locator</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Shipping &amp; Returns</a>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-lg text-label-lg text-primary uppercase">Newsletter</h4>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-secondary/40 focus:border-primary outline-none py-2 font-label-lg text-label-lg placeholder:text-on-surface-variant/50" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="absolute right-0 top-2 font-label-lg text-label-lg text-primary">JOIN</button>
+</div>
+<div class="flex gap-4">
+<a class="text-primary hover:opacity-70 transition-opacity" href="collections.html"><span class="material-symbols-outlined">brand_awareness</span></a>
+<a class="text-primary hover:opacity-70 transition-opacity" href="collections.html"><span class="material-symbols-outlined">share</span></a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-60">© 2024 Batik Benang Ratu Heritage Solo. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Toggle Filter Panel
+        const filterToggle = document.getElementById('filterToggle');
+        const filterPanel = document.getElementById('filterPanel');
+
+        filterToggle.addEventListener('click', () => {
+            filterPanel.classList.toggle('hidden');
+            if (!filterPanel.classList.contains('hidden')) {
+                filterToggle.classList.add('bg-secondary/10');
+            } else {
+                filterToggle.classList.remove('bg-secondary/10');
+            }
+        });
+
+        // Simple scale effect on scroll for images
+        window.addEventListener('scroll', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const rect = img.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const scrollPercent = (window.innerHeight - rect.top) / window.innerHeight;
+                    // Subtly adjust scale based on scroll for that tactile feel
+                }
+            });
+        });
+    </script>
+<a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50 flex items-center justify-center" aria-label="Chat via WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+  </svg>
+</a>
+</body></html>
+
+
+
+
+
+
+
+

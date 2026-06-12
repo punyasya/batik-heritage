@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Benang Ratu Heritage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#7c2a3a",
+                    "on-primary-container": "#f18795",
+                    "primary-container": "#6d1f2f",
+                    "on-tertiary-container": "#76b38c",
+                    "surface-tint": "#9a4150",
+                    "tertiary-fixed-dim": "#97d4ab",
+                    "secondary-container": "#fedb99",
+                    "inverse-on-surface": "#feeded",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#004527",
+                    "on-tertiary-fixed-variant": "#125132",
+                    "on-secondary-fixed-variant": "#5a430f",
+                    "on-secondary-fixed": "#261900",
+                    "surface-container-low": "#fff0f0",
+                    "outline-variant": "#dac0c2",
+                    "on-background": "#22191a",
+                    "on-secondary-container": "#785f29",
+                    "on-secondary": "#ffffff",
+                    "background": "#fff8f7",
+                    "on-primary-fixed": "#400011",
+                    "on-error-container": "#93000a",
+                    "inverse-surface": "#382e2f",
+                    "surface": "#fff8f7",
+                    "tertiary": "#002c17",
+                    "primary-fixed": "#ffd9dc",
+                    "surface-container-high": "#f5e4e5",
+                    "secondary": "#735b25",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#e3c282",
+                    "outline": "#877274",
+                    "primary-fixed-dim": "#ffb2bb",
+                    "on-tertiary-fixed": "#002110",
+                    "inverse-primary": "#ffb2bb",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#fbeaea",
+                    "on-surface-variant": "#544244",
+                    "primary": "#50071b",
+                    "on-surface": "#22191a",
+                    "surface-variant": "#efdfdf",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#b2f1c6",
+                    "surface-container-highest": "#efdfdf",
+                    "secondary-fixed": "#ffdea1",
+                    "surface-bright": "#fff8f7",
+                    "surface-dim": "#e7d6d7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-sm": ["Montserrat"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+        }
+        .luxury-shadow {
+            box-shadow: 0 20px 40px -15px rgba(80, 7, 27, 0.08);
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .asymmetric-image {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md font-medium tracking-tight text-primary">Benang Ratu Heritage</span>
+<div class="hidden md:flex gap-8">
+<a class="font-label-lg text-label-lg text-primary border-b border-primary pb-1" href="homepage.html">Shop</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="collections.html">Collections</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="heritage.html">Heritage</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a href="search.html" class="material-symbols-outlined text-primary hover:opacity-70 transition-opacity active:scale-95" data-icon="search">search</a>
+<a href="favorite.html" class="material-symbols-outlined text-primary hover:opacity-70 transition-opacity active:scale-95" data-icon="favorite">favorite</a>
+<a href="cart.html" class="material-symbols-outlined text-primary hover:opacity-70 transition-opacity active:scale-95" data-icon="shopping_bag">shopping_bag</a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Banner -->
+<section class="relative h-[921px] overflow-hidden">
+<div class="absolute inset-0">
+<img class="w-full h-full object-cover scale-105" data-alt="A high-fashion editorial shot featuring a model wearing a premium hand-drawn Batik silk gown in deep maroon and gold tones. The model stands elegantly in a sun-drenched colonial-era Solo mansion hallway with marble floors. The lighting is warm and cinematic, highlighting the intricate texture of the fabric. The atmosphere is prestigious, luxurious, and deeply rooted in Javanese heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8bJjagFPLE7948x5dX5MOQnrJC0PLamTCTbH4X1XtkjLlMnH7tC3KgNw9U-IqHjlvCkt0W0kbzMkZSLWIWvGW_gS7_3B9aw5HLn4NjuEQjxpDwuitdtP9kc4321wFd5lV5M30VtDcE3bPn0S4SBrCyrG6DyStNvPJkPSKw-3N9dpshh0Q76ygzwBBLaQlEr3MyAAImvMPsA-1zj_hE936_L2Ac76dPIxQh9n6BQK_DJAbNQ0bilQbfh1EP7GGGmI-nnGC26ZlpHMy"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+</div>
+<div class="relative h-full flex flex-col justify-center items-center text-center px-6">
+<h1 class="font-display-lg text-display-lg text-white mb-6 drop-shadow-lg max-w-4xl leading-tight">The Art of Solo Heritage</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-10 max-w-2xl tracking-wide">Meticulously handcrafted batik pieces that weave centuries of tradition into modern silhouettes for the discerning connoisseur.</p>
+<a class="bg-primary text-white font-label-lg text-label-lg px-12 py-5 tracking-widest hover:bg-primary-container transition-all duration-500 luxury-shadow uppercase" href="#collections">
+                    Explore Collection
+                </a>
+</div>
+</section>
+<!-- Heritage Values -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto border-b border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Authentic Solo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-8">Rooted in the royal traditions of Surakarta Hadiningrat, preserving pure cultural motifs.</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="pan_tool">pan_tool</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Handmade Craft</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-8">Every line is drawn with a canting tool and natural wax by master artisans over several months.</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4" data-icon="workspace_premium">workspace_premium</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Premium Quality</h3>
+<p class="font-body-md text-body-md text-on-surface-variant px-8">Only the finest silk and primissima cotton are selected for our heritage collections.</p>
+</div>
+</div>
+</section>
+<!-- Featured Collection -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="collections">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="max-w-xl">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-[0.2em] block mb-4">Limited Edition</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Keraton Signature</h2>
+</div>
+<a class="font-label-lg text-label-lg text-primary border-b border-primary pb-1 group flex items-center gap-2" href="collections.html">
+                    View All Collections
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A studio shot of a premium batik shirt featuring the classic Parang motif in indigo and ivory. The fabric has a subtle silk sheen and is draped over a minimalist wooden mannequin. The lighting is soft and directional, casting delicate shadows that emphasize the pattern's precision. The background is a warm neutral beige, creating a luxury retail aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBumVX8nwQ4FbuzncVIh29jhHiK8s0PZuLG4QVyfba8qxZzgFqK61xb0LJH571H4RmckvnkurfaardFcFiQnaEU1e-z9NAREwPiZg6JSieLeora6S9HIqKhTIxv0HC-cym7pql8BNCj-rD_fCapXTBfa9RXpoAf2MseEgmsRXxfApLRkcq1RP0peyZYe_kkVxgVq1iGsrrCbWHZ9aaOOuE_edW47cXb6b960Djrf_g2bMG1-AfokzotolFjqfy0YQ0zgdk922AszKB-"/>
+<div class="absolute top-4 left-4 bg-white/90 px-3 py-1 font-label-sm text-label-sm text-primary uppercase">New Selection</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Sekar Jagad Silk</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">IDR 4.250.000</p>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer mt-0 md:mt-12">
+<div class="relative overflow-hidden mb-6 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A close-up shot of a hand-painted Batik Tulis scarf in golden yellow and dark brown. The intricate floral motifs are incredibly detailed, showing the fine wax lines. The scarf is draped over a luxury glass surface reflecting soft ambient light. The scene communicates high-end craftsmanship and heritage luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_3TqqVRGzExCE1iftL0F6rqqXO0BPuWPFGTKTyRizaYmSQetJ5OXT-Q248U6nLDOjGWJdoP8u2VhN1tb8qcPQk3UQAQeBZT9ffrfXO83igWF75gkjfQjH-ARbfgDQyhyssy8zEnxh7ggPU3AHMBL3QI6YgHlGelpcvpS7On1Ti-NUbiT5W0MKQXrXtsfBjGL-X9JHCpLebA8cj9BxOzEVmVT41MyA8G1o4ctOIbmT-MBFShQpGbsxQ0NE-EIBIFTv_y-hlUHkgtyI"/>
+<div class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label-sm text-label-sm uppercase">Limited</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Golden Sogan Shawl</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">IDR 2.800.000</p>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="relative overflow-hidden mb-6 aspect-[3/4]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A sophisticated lifestyle image of a modern batik blazer for women, featuring a contemporary interpretation of the Megamendung pattern in teal and charcoal. The blazer is hung against a minimalist white gallery wall. The lighting is bright and airy, giving the product a clean, editorial look suitable for a luxury fashion house." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwWwr6CQpXNrjfDyTE8gTswzuwzeBJLxlYdcaHrk7PTj0-isHn0P9iWZuca1KZX69biRXEHGNMP6Lh6cdWk-FahGCK6Y-wwnu5K_wcJqwUR_TTpHYW_yCtSVxZ8WpgtEShSAIeDvFDla8jZI_cRXMME0REiSe5IcAvR_gYH9EMIH1t3nMFZ33FCT6PNuUdA5RF9LbqohMSXTZLUXi8P3mCZMyenwdiDuQIxrQPt0agZxuz2EpIP_iGk65uRPeBv0T99k6UxWmiFvKw"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Modern Kawung Blazer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">IDR 3.500.000</p>
+</div>
+</div>
+</section>
+<!-- Brand Story Section -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 items-center gap-16">
+<div class="md:col-span-5 relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 border-l-2 border-t-2 border-secondary/30"></div>
+<img class="w-full asymmetric-image luxury-shadow" data-alt="A portrait of an elderly Javanese master artisan meticulously applying hot wax to a fine piece of silk using a traditional copper canting tool. The setting is a traditional wooden workshop with warm, atmospheric lighting streaming through a window. The focus is on the artist's steady hand and the delicate smoke rising from the wax pot. The mood is respectful, timeless, and authentic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSRhU60K8jd0MN4RZ-_Gbk2wP2Srgu1Xkovh1NaB1ucrTgB1CDNJ6eJD5K4WBcqOs5PWCGRlmQ3zCH_Q1AJo3lD2GmihC3-iVfhF6WMn-_g1WsKgBjYL-FnVIinMJaaMDGtI_HU6v5Nk_eLBfr6fMOKevQRUG-292uV2Y-35tOdaSNhmYlzcEegva2QKEkj04e6bA5XJAtN7D2SNZYJ7Zwmd-1ZY_DlQeW_lqbGeXrU1cvpfB5VxXzV5NQ91I6UQ9QIMqpqV07A1X-"/>
+<div class="absolute -bottom-6 -right-6 bg-primary text-white p-8 luxury-shadow hidden md:block">
+<p class="font-headline-sm text-headline-sm italic">"A single piece of cloth, a thousand years of soul."</p>
+</div>
+</div>
+<div class="md:col-span-7 md:pl-16">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-[0.2em] block mb-4">Our Heritage</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 leading-tight">Preserving the Royal Legacy of Surakarta</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Founded in the heart of Solo, Benang Ratu Heritage is dedicated to the preservation and elevation of Batik Tulis — the world's most sophisticated textile art. Every garment we create is a bridge between the regal history of the keraton and the modern silhouette of the world citizen.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 italic">We don't just make clothing; we archive stories in silk and cotton, ensuring the wisdom of our ancestors continues to inspire the future.</p>
+<a class="inline-flex items-center gap-4 group" href="collections.html">
+<span class="w-12 h-[1px] bg-primary group-hover:w-20 transition-all"></span>
+<span class="font-label-lg text-label-lg text-primary uppercase tracking-widest">Discover The Craftsmanship</span>
+</a>
+</div>
+</div>
+</section>
+<!-- New Arrivals / Best Sellers Carousel -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex justify-between items-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">New Arrivals</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Product 1 -->
+<div class="group">
+<div class="bg-white p-4 mb-4 luxury-shadow overflow-hidden">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxury display of a men's batik shirt in charcoal and silver grey. The shirt is perfectly folded and presented on a white marble plinth. The lighting is crisp and modern, emphasizing the high-quality textile and the intricate royal pattern. The style is clean, upscale, and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsnNTt4bBFQYIvPzPX1lm2TZJx0p2-6m71jBnkwpX7wsnTLrcVoezpinzmU8kStp-wV-BfF0C1Jdn3hMhKvmIrVfJf--RQxzcLUf545Ld9NbYtTeog7OYbQm-AQ8XkFBVO4twAxWhhuXob7O97l8vrJBFBL7Im-7_JTQKeg7JIQsdu7jHDHqhmLIXX2yrc6Pm8ULvrx3vo_QlH77-ovZSlts9wwB-38OumNJegkARcRDHu-w6Ovfyl5jOtWM6SBb_nCXNOzlR5aEsA"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Traditional</span>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Srikaton Menswear</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">IDR 1.950.000</p>
+</div>
+<!-- Product 2 -->
+<div class="group">
+<div class="bg-white p-4 mb-4 luxury-shadow overflow-hidden">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant female batik blouse featuring soft pastel pink and grey tones with a delicate floral motif. The blouse is displayed in a brightly lit, high-end boutique setting with soft-focus luxury details in the background. The lighting is flattering and airy, conveying a sense of premium fashion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaM-GUxt-azy98HmnfWJ3C7xPOeqBQkbk1Zv7Q9HvK7OMRhPTwA4UV_teaISxdIl1YNl8Z6qeRDBZMyZJ-FkW5E3P0KM9cuggpKrAz1U2w43lh-nkzW0JXfwBZ_fcVppNNziv7Dw2xMwSpjcJukSKoOGa5M6L9Y65ThtEsiKEVRhWbKrtuXj4SfJugAMPT53NpqqxlcWkd6aFLX8SizMQGzsGpsvY_B8dgbgX-VPkyngG7P9ynRXDQ4zKw3nsHXs0mzM3yycvpQd6A"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Modern Heritage</span>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Ayana Floral Blouse</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">IDR 2.200.000</p>
+</div>
+<!-- Product 3 -->
+<div class="group">
+<div class="bg-white p-4 mb-4 luxury-shadow overflow-hidden">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A premium batik accessory kit featuring a silk tie and pocket square in a rich navy and gold Sidomukti pattern. The items are beautifully boxed in a dark maroon presentation case. The lighting highlights the texture of the silk and the metallic sheen of the gold wax. Professional luxury product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsDlsh-ZM9WMhxN9Wx3eFcHbX3v8EE7JIhcZrSOCJAFv3JlvrnxSsrh7n9YH61-5aquz-oDixJWzFm1ab5-Sz3PXoNU6LddQJ2MsEBTuvnFuVUxxrr_1HrogbAup00SRbwnBZbjWBnecZhQosEEG40LrovrH_Tcq3lmDl6ZeOq0rz15C2tZTmrshhY8Zt5qDzjlQI12xvJG9mYBA3nMqWuHhXH_MKNn5wzQufn9KfxET0R0mCWsPWoSTlXTwN08I3Fa210UFG4jOAt"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Accessories</span>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Royal Sidomukti Set</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">IDR 850.000</p>
+</div>
+<!-- Product 4 -->
+<div class="group">
+<div class="bg-white p-4 mb-4 luxury-shadow overflow-hidden">
+<img class="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxury lifestyle shot of a high-end batik tote bag featuring a bold, contemporary black and white pattern. The bag is held by a model dressed in minimalist white attire. The background is a clean architectural space in Solo. The image represents the brand's fusion of heritage and modern lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWvvZ7K-ch9VyrzW3ut6j6Wid-grTB5betB_WnC4kCi-bHVaXRuBW23wsFmzlpOxCrT4W3cRaUgyrTUAjy63eIM93Qr1mzAbCFSOSRW1wvQA10Exm5av7DbbASOMmiid8Y565EtE--nWyreeSEGPCTa5tpFKJgCwcmnQMbS3crFa6Tne2f5kDEs-lz8otfjjSC56gt_r-YH4SHAs8fu1XOwhLwjPRB3z06b_iPG9dsTT-sGn16hTE2KTQvAAUWDiNlrE111n4CltTA"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-1">Limited</span>
+<h4 class="font-label-lg text-label-lg text-primary mb-2">Urban Parang Tote</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">IDR 1.750.000</p>
+</div>
+</div>
+</section>
+<!-- Lookbook Preview -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-16 text-center">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-[0.3em] block mb-4">Editorial</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Season of Resonance</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 h-[800px] gap-2">
+<div class="md:col-span-2 relative group overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="An editorial fashion photograph of two models wearing modern batik evening wear. One is in a long maroon gown, the other in a sharp charcoal suit. They are posed in front of the ornate entrance of the Solo Royal Palace. The mood is highly prestigious, using deep shadows and dramatic lighting to create a sense of mystery and luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6N-eqXjdlxLSGSooZmv1YuzP9Ji28HtNqXD4ytpGSIByS-H8v7e7ysc46P0qokAdKkGHz9ilAWvepPxRGk2s6dvTirxwausgn4NcSxrQIBvbnYxuTTPP7ir4QWrUPEaI13rGJ_a-LoyTJrO3NnU494GJ4YVuQ4l3iM7LhJM6JJw-_AmVqWO6V-WIHpShUsrrEDWJ1ZpDKfw5ENXKZqoFh9XFaL1I7nbybn_DsyP7RYumlKtOYzZn0TOlLDmyh8-yTWKHdcmvGPazi"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="text-white font-label-lg tracking-widest border border-white px-8 py-3">View Lookbook</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="h-1/2 relative group overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="A close-up detail shot of hands weaving silk on a traditional wooden loom. The image is warm and tactile, showing the incredible detail of the thread. The lighting is soft and golden, emphasizing the 'hand-made' quality of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCpBpaUH24j0YANqfsiAnSZeXyQKVuyuGvESpYSa1E6EV2AIi7SROAJ65kqtdMNXl-y3M1y9be3CtpKSbiCT9TmuYuG2lehIiQdApvpDHtULIuMacHa_QBGnnyeK6WNEJBzVc-Ui0B4ZnYR50HWuAnM_S_O_ivvCQyeltN1w8kgm5nS2z3H5zAPJIf2gTokFPtyMdlhy7-umlmsB5puo9fwoC6wUY-tEkQ82-7mmOBrFJ4ejicwkOaAdCw21k9H7s6BXUIg98IrL25"/>
+</div>
+<div class="h-1/2 relative group overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="A collection of folded batik fabrics in various shades of indigo, earthy brown, and antique gold, stacked neatly on a dark wooden shelf. The arrangement is artistic and shows the variety of the brand's heritage patterns. High-end lifestyle vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpHaWEr_o0FGqmvbpfllXlrPAYaAf9qAMs8E8Guiw3jakgov-SRHLJLnc8bIhecMsF11op9VPZQilBvroqch_GZ35zTutYfYjITwTSiegqAhEAaRns933u9zWA22E_McT3m5mN1e50fYOdDkMSmL5e-zEDHI_qAsiy2XoIo55WuyTTzNl-i6_NSziHqbSrUyy3vpmZ_K5n5S4vMAAMUBD4FDVeZIv0Mpahqc5PuQPy2JklsxvjRVrckK854Gk6c1KNdJ-3h1XX_oOI"/>
+</div>
+</div>
+<div class="relative group overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="A model walking away in a sun-drenched courtyard, wearing a flowing silk batik caftan with a bold floral pattern. The sunlight creates a beautiful translucency through the fabric. The image captures movement and the effortless luxury of the brand's resort wear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsr_K7jpfss0ae8WCx75Ran80mWzNGP-Vg_qFhl1bbXPHdtxOuBK-4KdxRszwoH53IV2LARcMSR7w9vkZBun5Yo4iLbEOG3NzZPRevB3IDhI_nt8DdZmRVB1rStgu-YhBmiR1sxGT4mp7Lsp_1VhQPDH3i-ukYLSvuRQisLofEsV1bT6h3yubWv6kMrxBTWAm2GyDRaTVM-Pfv_4gWJL_ak9Q5aS0WTq3jzvB6QKzi4IfO36Egi3JcI0haLnHSAg7cSjG_y9E0v0s_"/>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-section-gap bg-primary text-white text-center overflow-hidden">
+<!-- Decorative Motif Overlay -->
+<div class="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[600px]" data-icon="settings_suggest">settings_suggest</span>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto px-margin-mobile">
+<h2 class="font-headline-lg text-headline-lg mb-8">Personalized Heritage</h2>
+<p class="font-body-lg text-body-lg mb-12 opacity-80 leading-relaxed">Experience the ultimate luxury of a bespoke batik creation. Our master artisans are available for custom consultations and private tailoring appointments.</p>
+<div class="flex flex-col md:flex-row gap-6 justify-center">
+<button class="bg-white text-primary font-label-lg px-12 py-5 tracking-widest hover:bg-surface-container transition-colors uppercase">
+                        Book a Consultation
+                    </button>
+<button class="border border-white/40 text-white font-label-lg px-12 py-5 tracking-widest hover:bg-white/10 transition-colors uppercase">
+                        Visit Our Boutique
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="flex flex-col gap-6">
+<span class="font-headline-sm text-headline-sm text-primary">Benang Ratu Heritage</span>
+<p class="font-body-md text-body-md text-on-surface-variant">The definitive house of high-end Solo Batik, where heritage meets contemporary elegance.</p>
+<div class="flex gap-4 mt-2">
+<a class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="public" href="collections.html">public</a>
+<a class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="photo_camera" href="collections.html">photo_camera</a>
+<a class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="mail" href="collections.html">mail</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-lg text-label-lg text-primary uppercase">The Brand</h5>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="heritage.html">The Craftsmanship</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Store Locator</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="heritage.html">Our Story</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Careers</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-lg text-label-lg text-primary uppercase">Customer Care</h5>
+<nav class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Sizing Guide</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Terms of Service</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-lg text-label-lg text-primary uppercase">Mailing List</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign up for invitations to exclusive collection launches.</p>
+<form class="relative">
+<input class="w-full bg-transparent border-0 border-b border-secondary/50 focus:ring-0 focus:border-primary text-primary px-0 py-3 font-label-lg" placeholder="YOUR EMAIL" type="email"/>
+<button class="absolute right-0 top-3 text-primary" type="submit">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</form>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Batik Benang Ratu Heritage Solo. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Apply fade-in effect to sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+
+            // Smooth parallax for hero image
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const heroImg = document.querySelector('section img');
+                if (heroImg) {
+                    heroImg.style.transform = `scale(1.05) translateY(${scrolled * 0.15}px)`;
+                }
+            });
+        });
+    </script>
+<a href="https://wa.me/6281234567890" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50 flex items-center justify-center" aria-label="Chat via WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+  </svg>
+</a>
+</body></html>
+
+
+
+
+
+
+
